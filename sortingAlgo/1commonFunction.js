@@ -9,7 +9,12 @@ const select = document.getElementById("selectionSort");
 const mergeSort = document.getElementById("mergeSort");
 const quickSort = document.getElementById("quickSort");
 const speed = document.querySelector(".speedSlider");
-
+const intro = document.querySelector(".intro");
+const infoBubble = document.querySelector(".bubble");
+const infoSelection = document.querySelector(".selection");
+const infoInsert = document.querySelector(".insert");
+const infoMerge = document.querySelector(".merge");
+const infoQuick = document.querySelector(".quick");
 
 // yellow color -> (j loops )  elements which we want to swap with  i
 // red -> current holding element
@@ -59,6 +64,12 @@ function addingBars(val) {
 /* *******************                   generate array            *************************/
 
 newArray.addEventListener("click" , ()=>{
+    intro.style.display="flex";
+    infoSelection.style.disable="none";
+    infoBubble.style.display="none"
+    infoInsert.style.display="none";
+    infoMerge.style.display = "none";
+    infoQuick.style.display = "none";
     let newLength = Math.floor(Math.random()*100);
     pushEle(newLength);
 })
@@ -66,6 +77,12 @@ newArray.addEventListener("click" , ()=>{
 /*******************                    moving slides               **********************/
 
 sizeSlider.addEventListener("change" ,()=>{
+    intro.style.display="flex";
+    infoSelection.style.disable="none";
+    infoBubble.style.display="none"
+    infoInsert.style.display="none";
+    infoMerge.style.display = "none";
+    infoQuick.style.display = "none";
     let newLength = sizeSlider.value;
     pushEle(newLength);
 })

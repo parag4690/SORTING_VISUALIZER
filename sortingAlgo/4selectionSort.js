@@ -65,7 +65,12 @@ async function selectionSort(ms = 250){
 //  add a event listener 
 
 select.addEventListener("click" , ()=>{
-    console.log(speedSliderValue + " it speed ");
+    intro.style.display="none";
+    infoSelection.style.display="flex";
+    infoBubble.style.display="none"
+    infoInsert.style.display="none";
+    infoMerge.style.display = "none";
+    infoQuick.style.display = "none";
     selectionSort(speedSliderValue);
 })
 

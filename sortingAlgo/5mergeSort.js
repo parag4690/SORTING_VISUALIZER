@@ -93,7 +93,12 @@ async function mergeSorting(){
 
 
 mergeSort.addEventListener("click" , ()=>{
-    console.log("clicked");
+    intro.style.display="none";
+    infoSelection.style.display="none";
+    infoBubble.style.display="none"
+    infoInsert.style.display="none";
+    infoMerge.style.display = "flex";
+    infoQuick.style.display = "none";
     mergeSorting();
     // disable();
 })

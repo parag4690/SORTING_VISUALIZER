@@ -67,5 +67,12 @@ async function bubbleSort(delay = 100) {
 }
 
 bubbleSorting.addEventListener("click", () => {
+  intro.style.display="none";
+  infoSelection.style.display="none";
+  infoBubble.style.display="flex"
+  infoInsert.style.display="none";
+  infoMerge.style.display = "none";
+  infoQuick.style.display = "none";
+  console.log("starting");
   bubbleSort();
 });

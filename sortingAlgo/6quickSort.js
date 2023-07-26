@@ -77,5 +77,11 @@ async function quick(){
 }
 
 quickSort.addEventListener("click" , ()=>{
+    intro.style.display="none";
+    infoSelection.style.display="none";
+    infoBubble.style.display="none"
+    infoInsert.style.display="none";
+    infoMerge.style.display = "none";
+    infoQuick.style.display = "flex";
     quick();
 })

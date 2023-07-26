@@ -55,5 +55,11 @@ async function insertionSorting() {
 // add event listner
 
 insertionSort.addEventListener("click", () => {
+  intro.style.display="none";
+  infoSelection.style.display="none";
+  infoBubble.style.display="none"
+  infoInsert.style.display="flex";
+  infoMerge.style.display = "none";
+  infoQuick.style.display = "none";
   insertionSorting();
 });

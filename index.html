@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="nav-container">
+            <h1 class="heading">SORTING VISUALIZER</h1>
+            <div class="nav-algo">
+                <button class="generate-array nav-sort">
+                    New Array
+                </button>
+               <!-- sliders -->
+                <div class="slider">
+
+                   <div class="size"> <div class="con"> Size of array  </div> <input class="sizeSlider sliders" type="range" min="1" max="200" value="20"> </div>
+                   <div class="speed"> <div class="con"> Speed of algorithm  </div><input type="range" class="sliders speedSlider" min="10" max="1000" step="50" value="50"> </div>
+                </div>
+              <!-- algorithm writter -->
+            <div class="sorting">
+              <button class="nav-sort" id="bubbleSort">Bubble Sort</button>
+              <button class="nav-sort" id="selectionSort">Selection Sort</button>
+              <button class="nav-sort" id="insertionSort">insertion Sort</button>
+              <button class="nav-sort" id="mergeSort">Merge Sort</button>
+              <button class="nav-sort" id="quickSort">Quick Sort</button>
+            </div>
+
+            </div>
+        </div>
+
+        <!-- visulizer  -->
+        <div class="visualizer-container">
+        </div>
+    </div>
+    <script src="sortingAlgo/1commonFunction.js"></script>
+    <script src="sortingAlgo/2bubbleSort.js"></script>
+    <script src="sortingAlgo/4selectionSort.js"></script>
+    <script src="sortingAlgo/3insertionSort.js"></script>
+    <script src="sortingAlgo/5mergeSort.js"></script>
+    <script src="sortingAlgo/6quickSort.js"></script>
+</body>
+</html>

@@ -12,5 +12,8 @@ I built this application because I was fascinated by sorting algorithms, and I w
 https://github.com/parag4690/SORTING_VISUALIZER/assets/102901470/b7fd767c-9401-4b20-b5df-2762289db1bb
 
 
+You can access it from here. https://sorting-visualizer777.netlify.app/
+
+
 
 

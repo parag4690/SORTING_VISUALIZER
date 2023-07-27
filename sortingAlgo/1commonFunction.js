@@ -8,7 +8,6 @@ const insertionSort = document.getElementById("insertionSort");
 const select = document.getElementById("selectionSort");
 const mergeSort = document.getElementById("mergeSort");
 const quickSort = document.getElementById("quickSort");
-const speed = document.querySelector(".speedSlider");
 const intro = document.querySelector(".intro");
 const infoBubble = document.querySelector(".bubble");
 const infoSelection = document.querySelector(".selection");
@@ -20,7 +19,7 @@ const infoQuick = document.querySelector(".quick");
 // red -> current holding element
 // green -> succesful place at write place;
 
-let speedSliderValue = speed.value;
+// let speedSliderValue = speed.value;
 let arr = [];
 let n = sizeSlider.value;
 pushEle(n);
@@ -52,7 +51,6 @@ function addingBars(val) {
             newEle.style.textAlign = "center";
             newEle.style.color = "white";
         }
-        // newEle.style.transition = "height  0.2s ease-in-out";
         fragment.appendChild(newEle);
     }
    
@@ -76,7 +74,7 @@ newArray.addEventListener("click" , ()=>{
 
 /*******************                    moving slides               **********************/
 
-sizeSlider.addEventListener("change" ,()=>{
+sizeSlider.addEventListener("input" ,()=>{
     intro.style.display="flex";
     infoSelection.style.disable="none";
     infoBubble.style.display="none"
@@ -87,9 +85,6 @@ sizeSlider.addEventListener("change" ,()=>{
     pushEle(newLength);
 })
 
-speed.addEventListener("change" , ()=>{
-    speedSliderValue = speed.value;
-})
 
 
 //   

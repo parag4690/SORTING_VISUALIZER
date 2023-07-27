@@ -7,7 +7,7 @@ function swap2(ele1 , ele2){
        window.requestAnimationFrame(()=>{
         visualizerContainer.insertBefore(ele2 , ele1);
         resolve();
-       },250) 
+       }) 
         
     })
 
@@ -15,11 +15,9 @@ function swap2(ele1 , ele2){
 
 /**********          selection sort          ************ */
 
-async function selectionSort(ms = 250){
+async function selectionSort(){
 
   disable();
-
-/**********        start the algorithm             ********** */
 
     let block = document.querySelectorAll(".barHeight");
     console.log(block);
@@ -40,11 +38,7 @@ async function selectionSort(ms = 250){
         // yellow color the selected element
         block[miniInd].style.background = "yellow";
 
-        await new Promise ((resolve)=>{
-            setTimeout(()=>{
-              resolve();
-            } , ms);
-        })
+ 
         await swap2(block[i] , block[miniInd]);
         block = document.querySelectorAll(".barHeight");
         block[miniInd].style.background = "blue";
@@ -71,6 +65,6 @@ select.addEventListener("click" , ()=>{
     infoInsert.style.display="none";
     infoMerge.style.display = "none";
     infoQuick.style.display = "none";
-    selectionSort(speedSliderValue);
+    selectionSort();
 })
 

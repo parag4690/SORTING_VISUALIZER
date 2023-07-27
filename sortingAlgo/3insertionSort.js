@@ -26,12 +26,6 @@ async function insertionSorting() {
     ) {
       block[j].style.backgroundColor = "red";
       block[j - 1].style.backgroundColor = "yellow";
-
-      await new Promise((resolve) => {
-        setTimeout(() => {
-          resolve();
-        },speedSliderValue);
-      });
       await swap3(block[j - 1], block[j]); // j vale ko phle leke anna hai
       // now update the block -> as movement happened
 
@@ -40,7 +34,6 @@ async function insertionSorting() {
       block[j].style.backgroundColor = "#85FFBD";
       j--;
     }
-    console.log(j);
     // block[j].style.backgroundColor="#85FFBD";
   }
 

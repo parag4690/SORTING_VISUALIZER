@@ -40,16 +40,15 @@ async function merging(arr , low , mid , high){
      document.getElementById(`${id[i-low]}`).style.background="yellow";
      await new Promise((resolve)=>{
         window.requestAnimationFrame(()=>{
-            setTimeout(()=>{
                 arr[i].style.height = temp[i-low]+"%";
                 if(arr.length<=20) {
                  arr[i].innerHTML =` ${temp[i-low]} `; 
                 }
                 resolve();
-             } , speedSliderValue);
         })
         
      });
+
      document.getElementById(`${id[i-low]}`).style.background="#F99BF9";
 
      arr[i].style.background="#F99BF9";

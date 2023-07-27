@@ -1,6 +1,5 @@
 function swap4(ele1 , ele2){
     return new Promise((resolve)=>{
-        setTimeout(()=>{
             window.requestAnimationFrame(()=>{
                 let c = ele1.style.height;
                 ele1.style.height = ele2.style.height;
@@ -10,15 +9,12 @@ function swap4(ele1 , ele2){
                 ele2.innerText = c1;
                 resolve();
             })
-        } , speedSliderValue)
     })
 }
 
 // -----------------                       -----------               ----------------     
-// -----------------                       -----------               ----------------     
 
 async function findPartion(block , start , end){
-    console.log("entered");
     let pivot =  block[start];
     let i = start;
     let j = end;
@@ -37,7 +33,7 @@ async function findPartion(block , start , end){
       
         if(i<j){
             // swap both of them 
-            await swap4(block[i] , block[j]); // j ko phle leke jana hai
+            await swap4(block[i] , block[j]); 
         }
     }
 

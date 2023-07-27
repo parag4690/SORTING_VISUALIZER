@@ -1,13 +1,8 @@
 /*******************                  swap the two divs using promises       **************** */
 
 function swap(box1, box2) {
-  return new Promise((resolve, reject) => {
-    // let temp = box1.style.height;
-    // box1.style.height = box2.style.height;
-    // box2.style.height = temp;
-
+  return new Promise((resolve) => {
     window.requestAnimationFrame(() => {
-      setTimeout(() => {
         // insertbefore(new , reference); new ko reference se phle leyaga
 
         visualizerContainer.insertBefore(box2, box1);
@@ -15,8 +10,8 @@ function swap(box1, box2) {
         // swap krni prege
         // it will insert box2 before box1
         resolve();
-      }, speedSliderValue);
-    });
+      } );
+      
   });
 }
 
@@ -39,13 +34,11 @@ async function bubbleSort(delay = 100) {
       block[j].style.backgroundColor = "red";
       block[j + 1].style.backgroundColor = "yellow";
 
-      console.log("running");
       let value1 = parseInt(block[j].style.height);
       let value2 = parseInt(block[j + 1].style.height);
       if (value1 > value2) {
         await swap(block[j], block[j + 1]); // jb tk swap nhi hota tb tk age nhi jayga
-        // console.log("waiting after ");
-
+ 
         block = document.querySelectorAll(".barHeight"); // it is imported to update as we have swaped the ele
       }
 

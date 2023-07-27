@@ -14,7 +14,9 @@ const infoSelection = document.querySelector(".selection");
 const infoInsert = document.querySelector(".insert");
 const infoMerge = document.querySelector(".merge");
 const infoQuick = document.querySelector(".quick");
-
+const navi = document.querySelector(".nav");
+const navAlgo =document.querySelector(".nav-algo");
+const navSort = document.querySelector(".sorting");
 // yellow color -> (j loops )  elements which we want to swap with  i
 // red -> current holding element
 // green -> succesful place at write place;
@@ -63,7 +65,7 @@ function addingBars(val) {
 
 newArray.addEventListener("click" , ()=>{
     intro.style.display="flex";
-    infoSelection.style.disable="none";
+    infoSelection.style.display="none";
     infoBubble.style.display="none"
     infoInsert.style.display="none";
     infoMerge.style.display = "none";
@@ -76,7 +78,7 @@ newArray.addEventListener("click" , ()=>{
 
 sizeSlider.addEventListener("input" ,()=>{
     intro.style.display="flex";
-    infoSelection.style.disable="none";
+    infoSelection.style.display="none";
     infoBubble.style.display="none"
     infoInsert.style.display="none";
     infoMerge.style.display = "none";
@@ -121,3 +123,9 @@ function enable(){
        sliders[i].style.cursor="pointer";
       }
 }
+
+// 
+navi.addEventListener("click" , ()=>{
+   navAlgo.id = "navAlgo";
+   navSort.id  = "navSort";
+})
